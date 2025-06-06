@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tic-Tac-Toe with Logos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Tic-Tac-Toe</h1>
+
+  <div id="setup">
+    <label for="player1Name">Player 1 Name:</label>
+    <input type="text" id="player1Name" placeholder="Player 1" />
+
+    <label>Choose Player 1 Logo:</label>
+    <div class="logo-picker" id="player1LogoPicker">
+      <div class="logo-option selected" data-logo="😀">😀</div>
+      <div class="logo-option" data-logo="⭐">⭐</div>
+      <div class="logo-option" data-logo="❤️">❤️</div>
+    </div>
+
+    <label for="modeSelect">Play vs AI?</label>
+    <select id="modeSelect">
+      <option value="ai" selected>Yes</option>
+      <option value="pvp">No, play vs Player 2</option>
+    </select>
+
+    <div id="player2Div" style="display:none;">
+      <label for="player2Name">Player 2 Name:</label>
+      <input type="text" id="player2Name" placeholder="Player 2" />
+
+      <label>Choose Player 2 Logo:</label>
+      <div class="logo-picker" id="player2LogoPicker">
+        <div class="logo-option selected" data-logo="🤖">🤖</div>
+        <div class="logo-option" data-logo="👾">👾</div>
+        <div class="logo-option" data-logo="🐱">🐱</div>
+      </div>
+    </div>
+
+    <button id="startBtn">Start Game</button>
+  </div>
+
+  <div id="board" style="display:none;"></div>
+  <div id="status"></div>
+  <button id="restartBtn">Restart Game</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
